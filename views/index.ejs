@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <% if(locals.message) { %>
+        <h1>Please Enter Again🧐</h1>
+        <%- message%>
+    <% } else { %>
+    <h1>Login Page</h1>
+    <% } %>
+    <form action="/submit" method="POST">
+        <label for="E-mail">E-mail</label>
+        <input type="text" name="email" required> <br>
+        <label for="Password">Password</label>
+        <input type="password" name="password" required> <br>
+        <label for="company">Company Name</label>
+        <input type="text" name="company" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
